@@ -19,12 +19,13 @@ puts "How many dice?"
 def show_rolling_die
   sum = 0 # Для подсчета суммы выпавших кубиков
   @number.times do
-    num = "#{rand(6) + 1}"
-    print num.to_i
-    sum += num.to_i
+    @num = "#{rand(6)}"
+    print @num.to_i
+    sum += @num.to_i
     sleep 0.1
     print "\r"
   end
   puts "Sum of dice #{sum}"
+  puts @num
 end
 show_rolling_die
